@@ -2,5 +2,154 @@
 
 html,
 body {
-
+	height: 100%;
+	font-family: "Open Sans", sans-serif;
+}
+body{
+	@media (max-width:960px){
+		&.lock{
+			overflow: hidden;
+		}
+	}
+}
+.wrapper {
+}
+.header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		z-index: 2;
+	}
+}
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+.header__body {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	height: 68px;
+	align-items: center;
+	@media (max-width:960px){
+		height: 50px;
+	}
+}
+.header__logo {
+	flex: 0 0 250px;
+	position: relative;
+	z-index: 3;
+	img{
+		max-width: 100%;
+		display: block;
+	}
+	@media (max-width:960px){
+		flex: 0 0 200px;
+	}
+}
+.header__burger {
+	display: none;
+	@media (max-width:960px) {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		position: relative;
+		z-index: 3;
+		span{
+			position: absolute;
+			background-color: #000;
+			left: 0;
+			width: 100%;
+			height: 2px;	
+			top: 9px;
+			transition: all 0.3s ease 0s;
+		}
+		&:before,
+		&:after{
+			transition: all 0.3s ease 0s;
+			content: '';
+			background-color: #000;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			left: 0;
+		}
+		&:before{
+			top: 0;
+		}
+		&:after{
+			bottom: 0;
+		}
+		&.active:before{
+			transform: rotate(45deg);
+			top: 9px;
+		}
+		&.active:after{
+			transform: rotate(-45deg);
+			bottom: 9px;
+		}
+		&.active{
+			span{
+				transform: scale(0);
+			}
+		}
+	}
+}
+.header__menu {
+	@media (max-width:960px){
+		position: fixed;
+		top: -300%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		padding: 100px 10px 20px 10px;
+		transition: all 0.3s ease 0s;
+		&.active{
+			top: 0;
+		}
+		overflow: auto;
+	}
+}
+.header__list {
+	display: flex;
+	position: relative;
+	z-index: 2;
+	li {
+		list-style: none;
+		margin-left: 28px;
+	}
+	@media (max-width:960px){
+		display: block;
+		li{
+			margin: 0 0 20px 0;
+		}
+	}
+}
+.header__link {
+	color: #1e1e1e;
+	font-size: 16px;
+	line-height: 20px;
+	text-transform: uppercase;
+	border-bottom: 1px solid #6e002e00;
+	transition: all 0.3s ease 0s;
+	&:hover{
+		border-bottom: 1px solid #6e002e;
+	}
+	@media (max-width:960px){
+		font-size: 24px;
+		line-height: 30px;
+	}
 }
