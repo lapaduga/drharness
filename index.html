@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Creature hunters</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+	
+	<!-- 1. Создаем элемент внутри которого у нас будет отображаться карта Google Maps -->
+	<div id="map"></div>
+
+	
+
+<!-- 3. Подключаем библиотеку Google Maps Api, чтобы создать карту -->
+	<!-- Атрибуты async и defer - позволяют загружать этот скрипт асинхронно, вместе с загрузкой всей страницы  -->
+	<!-- В подключении библиотеки Google Maps Api в конце указан параметр callback, после  подключения и загрузки этого Api сработает функция initMap для отрисовки карты,  которую мы описали выше -->
+	<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+	
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
