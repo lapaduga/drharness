@@ -5,5 +5,12 @@ $(document).ready(function () {
 		$('body').toggleClass('lock');
 	});
 	//Slider behaviour
-	
+	$('.slider').slick({
+		arrows: false,
+		autoplay: true,
+		centerMode: true,
+		variableWidth: true,
+		initialSlide: 3,
+		adaptiveHeight: true
+	});
 });

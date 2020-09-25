@@ -330,7 +330,7 @@ body {
 		display: block;
 		transform: translate(-50%);
 	}
-	@media (max-width: 640px){
+	@media (max-width: 640px) {
 		font-size: 24px;
 	}
 }
@@ -342,4 +342,23 @@ body {
 	p {
 		margin-bottom: 10px;
 	}
+}
+
+//slider
+
+.slider {
+	margin-bottom: 41px;
+	.slick-list {
+		overflow: hidden;
+	}
+	/* Лента слайдов */
+	.slick-track {
+		display: flex;
+		align-items: flex-start;
+	}
+	@media (max-width: 640px){
+		margin-bottom: 20px;
+	}
+}
+.slider__item {
 }
