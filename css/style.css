@@ -99,6 +99,12 @@ body {
   }
 }
 
+.wrapper {
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -729,4 +735,28 @@ body {
   .table__row-size {
     font-size: 10px;
   }
+}
+
+.catalog__tabs-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.catalog__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.catalog__block:last-child {
+  display: none;
+}
+
+.catalog__block:target {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
