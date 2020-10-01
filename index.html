@@ -565,9 +565,11 @@
 	<div id="popup" class="popup">
 		<div class="popup__body">
 			<div class="popup__content">
-				<a href="#header" class="popup__close"></a>
+				<a href="#header" class="popup__close">
+					<img src="img/icons/popup/cancel.png" alt="">
+				</a>
 				<div class="popup__image">
-					<img src="img/img/catalog/1.jpg" alt="">
+					<img src="img/img/popup/popup.jpg" alt="">
 				</div>
 				<div class="popup__form">
 					<form action="#">
@@ -586,10 +588,10 @@
 							<option value="">XL</option>
 							<option value="">XXL</option>
 						</select>
-						<input type="text" class="popup__input-name">
-						<input type="text" class="popup__input-phone">
+						<input placeholder="Введите ваше" type="text" name="name" class="popup__input-name">
+						<input placeholder="Введите ваш телефон" type="text" name="phone" class="popup__input-phone">
 						<div class="popup__button-container">
-							<button type="submit" class="card-button">Оформить заказ</button>
+							<button type="submit" class="card-button popup-button">Оформить заказ</button>
 						</div>
 					</form>
 				</div>
