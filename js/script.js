@@ -26,11 +26,6 @@ $(document).ready(function () {
 		$('#erotic-tab').addClass('active-tab');
 		$('#erotic').addClass('chosen');
 	});
-	$('.mainscreen__button').on('click', function(e){
-		let fixed_offset = 100;
-		$('html,body').stop().animate({ scrollTop: $('#catalog').offset().top - fixed_offset }, 1000);
-		e.preventDefault();
-	});
 	//Tabs
 	$("#tabs").on("click", ".catalog__tab", function () {
 		$("#tabs .catalog__tab").removeClass('active-tab');
@@ -52,5 +47,14 @@ $(document).ready(function () {
 	//Colors & Images
 
 	//Smooth scroll
-
+	$('.mainscreen__button').on('click', function(e){
+		let fixed_offset = 100;
+		$('html,body').stop().animate({ scrollTop: $('#catalog').offset().top - fixed_offset }, 1000);
+		e.preventDefault();
+	});
+	$('.header__link').on('click', function(e){
+		let fixed_offset = 100;
+		$('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
+		e.preventDefault();
+	});
 });
