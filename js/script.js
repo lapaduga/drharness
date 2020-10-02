@@ -13,6 +13,24 @@ $(document).ready(function () {
 		initialSlide: 3,
 		adaptiveHeight: true
 	});
+	//Mainscreen buttons
+	$("#main-btn-everyday").on("click", function () {
+		$("#tabs .catalog__tab").removeClass('active-tab');
+		$("#erotic").removeClass('chosen');
+		$('#everyday-tab').addClass('active-tab');
+		$('#everyday').addClass('chosen');
+	});
+	$("#main-btn-ero").on("click", function () {
+		$("#tabs .catalog__tab").removeClass('active-tab');
+		$("#everyday").removeClass('chosen');
+		$('#erotic-tab').addClass('active-tab');
+		$('#erotic').addClass('chosen');
+	});
+	$('.mainscreen__button').on('click', function(e){
+		let fixed_offset = 100;
+		$('html,body').stop().animate({ scrollTop: $('#catalog').offset().top - fixed_offset }, 1000);
+		e.preventDefault();
+	});
 	//Tabs
 	$("#tabs").on("click", ".catalog__tab", function () {
 		$("#tabs .catalog__tab").removeClass('active-tab');
@@ -32,5 +50,7 @@ $(document).ready(function () {
 		}
 	});
 	//Colors & Images
+
+	//Smooth scroll
 
 });
