@@ -44,8 +44,6 @@ $(document).ready(function () {
 			$(this).toggleClass('clicked');
 		}
 	});
-	//Colors & Images
-
 	//Smooth scroll
 	$('.mainscreen__button').on('click', function(e){
 		let fixed_offset = 100;
